@@ -1,0 +1,35 @@
+Acme\ProjBundle\Entity\Comment:
+    type: entity
+    table: comment
+    repositoryClass: Acme\ProjBundle\Entity\CommentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        autor:
+            type: string(30)
+            minlength: 6
+        date:
+            type: datetime
+            notblank: true
+        site:
+            type: string(255)
+            notblank: true
+            email: true
+        comment:
+            type: text
+        rating:
+            type: smallint
+            range: [1, 10]
+        status:
+            type: smallint
+            default: 1
+            range: [1, 3]
+        failure:
+            type: smallint
+            default: null
+            range: [1, 4]
+    lifecycleCallbacks: {  }
