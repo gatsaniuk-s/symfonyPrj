@@ -1,0 +1,3 @@
+acme_proj_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcmeProjBundle:Default:index }

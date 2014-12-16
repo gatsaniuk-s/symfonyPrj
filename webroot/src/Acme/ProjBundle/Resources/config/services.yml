@@ -1,0 +1,4 @@
+services:
+#    acme_proj.example:
+#        class: Acme\ProjBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
