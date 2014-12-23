@@ -1,0 +1,49 @@
+# src/Acme/ProjBundle/Resources/config/validation.yml
+Acme\ProjBundle\Entity\Comment:
+    properties:
+        author:
+            - NotBlank: ~
+            - Length:
+                min: 6
+                minMessage: "Your first name must be at least {{ limit }} characters length"
+            - Type:
+                type: string
+                message: The value {{ value }} is not a valid {{ type }}.
+        date:
+            - NotBlank: ~
+            - DateTime: ~
+        site:
+            - NotBlank: ~
+            - Url: ~
+#        comment:
+#            - Type:
+        rating:
+            - NotBlank: ~
+            - Type:
+                type: integer
+                message: The value {{ value }} is not a valid {{ type }}.
+            - Range:
+                min: 1
+                max: 10
+                minMessage: You must be at least 1 tall to enter
+                maxMessage: You cannot be taller than 10 to enter
+        status:
+            - NotBlank: ~
+            - Type:
+                type: integer
+                message: The value {{ value }} is not a valid {{ type }}.
+            - Range:
+                min: 1
+                max: 3
+                minMessage: You must be at least 1 tall to enter
+                maxMessage: You cannot be taller than 3 to enter
+        failure:
+            - NotBlank: ~
+            - Type:
+                type: integer
+                message: The value {{ value }} is not a valid {{ type }}.
+            - Range:
+                min: 1
+                max: 4
+                minMessage: You must be at least 1 tall to enter
+                maxMessage: You cannot be taller than 4 to enter

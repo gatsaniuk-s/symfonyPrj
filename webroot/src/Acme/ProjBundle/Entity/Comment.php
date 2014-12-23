@@ -17,7 +17,7 @@ class Comment
     /**
      * @var string
      */
-    private $autor;
+    private $author;
 
     /**
      * @var \DateTime
@@ -61,26 +61,26 @@ class Comment
     }
 
     /**
-     * Set autor
+     * Set author
      *
-     * @param string $autor
+     * @param string $author
      * @return Comment
      */
-    public function setAutor($autor)
+    public function setAuthor($author)
     {
-        $this->autor = $autor;
+        $this->author = $author;
 
         return $this;
     }
 
     /**
-     * Get autor
+     * Get author
      *
      * @return string 
      */
-    public function getAutor()
+    public function getAuthor()
     {
-        return $this->autor;
+        return $this->author;
     }
 
     /**

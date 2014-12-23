@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}
+            Acquaintance of the symfony2
+        {% endblock %}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {% block stylesheets %}
+        {#<link rel="stylesheet" href="{{ asset('bundles/ensjobeet/css/main.css') }}" type="text/css" media="all" />#}
+    {% endblock %}
+
+    {% block javascripts %}
+        {#{% javascripts#}
+            {#'@AcmeProjBundle/Resources/public/js/jquery-2.1.1.js'#}
+            {#'@AcmeProjBundle/Resources/public/js/main.js'#}
+        {#%}#}
+        {% javascripts
+            '@AcmeProjBundle/Resources/public/js/*'
+        %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+    {#<link rel="shortcut icon" href="{{ asset('bundles/ensjobeet/images/favicon.ico') }}" />#}
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            {% block header %}
+            {% endblock %}
+        </div>
+
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <div id="footer">
+            {% block footer %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

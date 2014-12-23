@@ -9,7 +9,7 @@ Acme\ProjBundle\Entity\Comment:
             generator:
                 strategy: AUTO
     fields:
-        autor:
+        author:
             type: string(30)
             minlength: 6
         date:

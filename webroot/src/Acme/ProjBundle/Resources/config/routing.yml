@@ -1,3 +1,7 @@
 acme_proj_homepage:
     path:     /hello/{name}
     defaults: { _controller: AcmeProjBundle:Default:index }
+
+acme_proj_create_comment:
+    path:     /create/comment
+    defaults: { _controller: AcmeProjBundle:Default:createComment }

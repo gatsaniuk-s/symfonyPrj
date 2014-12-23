@@ -1,0 +1,15 @@
+{% extends 'AcmeProjBundle::layout.html.twig' %}
+
+{% block content %}
+    {% form_theme form 'AcmeProjBundle:Form:bootstrap_3_layout.html.twig' %}
+
+    <form action="{{ path('acme_proj_create_comment') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form) }}
+
+        {{ form_label(form) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+
+        <input type="submit" />
+    </form>
+{% endblock %}
